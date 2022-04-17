@@ -6,3 +6,20 @@
 //Musica1
 //Musica2
 //Musica3
+fun main() {
+    println("Qual a sua banda preferida?")
+    var banda = readln()
+
+    var musicas = arrayOfNulls<String>(3)
+
+    for(i: Int in musicas.indices){
+        println("Escreva o nome de uma música de $banda:")
+        musicas[i] = readln()
+    }
+
+    println("-----------\n$banda\n----------")
+
+    for(i: Int in musicas.indices){
+        println(musicas[i])
+    }
+}

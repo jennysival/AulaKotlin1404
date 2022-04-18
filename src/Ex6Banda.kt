@@ -19,7 +19,9 @@ fun main() {
 
     println("-----------\n$banda\n----------")
 
-    for(i: Int in musicas.indices){
-        println(musicas[i])
-    }
+//    for(i: Int in musicas.indices){
+//        println(musicas[i])
+//    }
+
+    musicas.forEach { it -> println(it) }
 }

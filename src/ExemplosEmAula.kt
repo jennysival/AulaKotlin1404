@@ -30,3 +30,5 @@ fun main() {
 
 
 }
+
+//exitProcess(0) para sair de um processo

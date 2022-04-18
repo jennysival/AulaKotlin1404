@@ -8,10 +8,27 @@ fun main() {
     println("Digite um número:")
     val numeroDigitado = readln().toInt()
 
-   when(numeroDigitado){
-       0 -> println("Fib(0) = 0")
-       1 -> println("Fib(1) = 1")
+    var vetorFibo = IntArray(numeroDigitado)
 
-   }
+    var atual = 0
+    var proximo = 1
+    var soma = 0
+
+    for(i: Int in vetorFibo.indices){
+        soma = atual + proximo
+        vetorFibo[i] = atual
+        atual = proximo
+        proximo = soma
+    }
+
+    if(numeroDigitado == 0){
+        println("F(0) = 0")
+    }
+    else if(numeroDigitado == 1){
+        println("F(1) = 1")
+    }
+
+
+    }
 
 }

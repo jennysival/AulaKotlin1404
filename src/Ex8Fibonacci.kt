@@ -8,4 +8,10 @@ fun main() {
     println("Digite um número:")
     val numeroDigitado = readln().toInt()
 
+   when(numeroDigitado){
+       0 -> println("Fib(0) = 0")
+       1 -> println("Fib(1) = 1")
+
+   }
+
 }

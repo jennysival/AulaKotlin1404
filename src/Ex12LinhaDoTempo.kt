@@ -14,7 +14,5 @@ fun main() {
         vetorLinhaDoTempo[i] = anoNascimento+i
     }
 
-    for(i: Int in vetorLinhaDoTempo.indices){
-        println("${vetorLinhaDoTempo[i]}: $i anos")
-    }
+    vetorLinhaDoTempo.forEachIndexed { index, i -> println("$i: $index anos") }
 }

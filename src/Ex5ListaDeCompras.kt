@@ -17,7 +17,5 @@ fun main() {
 
     println("Aqui está sua lista de compras")
 
-    for(i: Int in vetorListaDeCompras.indices){
-        println("${i+1}: ${vetorListaDeCompras[i]}")
-    }
+    vetorListaDeCompras.forEachIndexed { index, s -> println("${index+1}: $s") }
 }

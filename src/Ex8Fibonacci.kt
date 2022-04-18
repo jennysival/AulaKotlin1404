@@ -10,25 +10,29 @@ fun main() {
 
     var vetorFibo = IntArray(numeroDigitado)
 
-    var atual = 0
-    var proximo = 1
+    var anterior = 0
+    var proxima = 1
     var soma = 0
+    val tamanhoFibo = numeroDigitado+1
 
-    for(i: Int in vetorFibo.indices){
-        soma = atual + proximo
-        vetorFibo[i] = atual
-        atual = proximo
-        proximo = soma
+    for(i in 0..tamanhoFibo){
+        vetorFibo[i] = anterior
+        soma = anterior + proxima
+        anterior = proxima
+        proxima = soma
     }
 
-    if(numeroDigitado == 0){
-        println("F(0) = 0")
+    for(i in 0..tamanhoFibo){
+        if(numeroDigitado == 0){
+            println("F(0) = 0")
+        }
+        else if(numeroDigitado == 1){
+            println("F(1) = 1")
+        }
+        else if(numeroDigitado == vetorFibo[numeroDigitado]){
+            println("F($numeroDigitado) = ${vetorFibo[numeroDigitado]}")
+        }
     }
-    else if(numeroDigitado == 1){
-        println("F(1) = 1")
-    }
-
-
-    }
+//DEU TUDO ERRADO
 
 }
